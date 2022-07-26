@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AbhiShop- Furniture</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="slide.css">
+      </head>
+      <body>
+    
+        <!-- header  -->
+        <header>
+          <div class = "container">
+            <!-- navbar -->
+            <nav class = "navbar">
+              <a href = "index.html" class = "navbar-brand"><i class="fas fa-store"></i> AbhiShop</a>
+              <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+              </form>
+        
+              <button type = "button" class = "navbar-toggler">
+                <i class = "fas fa-bars"></i>
+              </button>
+              <div class = "navbar-collapse">
+                <ul>
+                  <li><a href = "#">Home</a></li>
+                  <li><a href = "#">Product</a></li>
+                  <li><a href = "#">New Arrivals</a></li>
+                  <li><a href = "#">Blog</a></li>
+                  <li><a href = "#">contact</a></li>
+                </ul>
+              </div>
+    
+              <div class = "cart">
+                <a href="login.html" class="fas fa-user" id="user"></a>
+                <button type = "button" id = "cart-btn">
+                  <i class = "fas fa-shopping-cart"></i>
+                  <span id = "cart-count-info">0</span>
+                </button>
+                
+                <div class = "cart-container">
+                  <div class = "cart-list">
+                    <!-- single item -->
+                    <!-- <div class = "cart-item">
+                      <img src = "images/armchair.png" alt = "product image">
+                      <div class = "cart-item-info">
+                        <h3 class = "cart-item-name">Arm Chair</h3>
+                        <span class = "cart-item-category">Chair</span>
+                        <span class = "cart-item-price">$120.00</span>
+                      </div>
+                      <button type = "button" class = "cart-item-del-btn">
+                        <i class = "fas fa-times"></i>
+                      </button>
+                    </div> -->
+                    <!-- end of single item  -->
+                  </div>
+
+    
+                  <div class = "cart-total">
+                    <h3>Total: $</h3>
+                    <span id = "cart-total-value"></span>
+                  </div>
+                  <br>
+                  <h4>
+                    <a href="" style="font-size: 1rem; color:Red; text-align: center; display: block; align-items: center; border:1px solid blanchedalmond; width: fit-content; "  >Proceed To Check Out</a>
+
+                  </h4>
+                 
+                </div>
+              </div>
+            </nav>
+            <!-- end of navbar -->
+    
+            <!-- banner -->
+            <div class = "banner">
+              <div class = "banner-content">
+                <h1>Furniture For Your Home</h1>
+                <p class = "text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos eveniet, quis nisi recusandae assumenda ea sequi obcaecati accusantium in provident dolore debitis autem neque vel commodi atque voluptates incidunt aliquam delectus veritatis? Exercitationem, fugit sed!</p>
+                <div class = "btns">
+                  <button type = "button" class = "btn">know more</button>
+                  <button type = "button" class = "btn">more info</button>
+                </div>
+              </div>
+    
+              <div class = "banner-img">
+                <img src = "images/banner-img.png" alt = "furniture banner image">
+              </div>
+            </div>
+            <!-- end of banner  -->
+          </div>
+        </header>
+        <!-- end of header -->
+
+        <h1>Product Slider</h1>
+        <main>
+            <div class="slide-container">
+            <img id="slide-left" class="arrow" src="images/arrow-left.png">
+        <section class="container" id="slider">
+            
+            <div class="thumbnail">
+                <img src="./images/1.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/2.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/3.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/4.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/5.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/6.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/7.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/8.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/9.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/10.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+            <div class="thumbnail">
+                <img src="./images/11.png" alt="">
+                <div class="product-details">
+                    <h2>Demo Product</h2>
+                    <p> <span>$39.99</span> $29.99</p>
+                    <a href="#">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+        <img id="slide-right" class="arrow" src="images/arrow-right.png">
+    </div>
+    </main>
+    
+        <!-- products section  -->
+        <section class = "products">
+          <div class = "container">
+            <h2>Our Products</h2>
+            <div class = "product-list">
+              <!-- single item -->
+              <!-- <div class = "product-item">
+                <div class = "product-img">
+                  <img src = "images/bed.png" alt = "product image">
+                  <button type = "button" class = "add-to-cart-btn">
+                    <i class = "fas fa-shopping-cart"></i>Add To Cart
+                  </button>
+                </div>
+                <div class = "product-content">
+                  <h3 class = "product-name">Wooden Bed</h3>
+                  <span class = "product-category">Bed</span>
+                  <p class = "product-price">$120.00</p>
+                </div>
+              </div> -->
+              <!-- end of single item -->
+            </div>
+          </div>
+        </section>
+        <!-- end of products section -->
+    
+        <!-- footer -->
+      <section class="quick-links">
+
+    <a href="home.html" class="logo"> <i class="fas fa-store"></i> AbhiShop </a>
+
+    <div class="links">
+        <a href="home.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="products.html"> Products </a>
+        <a href="contact.html"> Contact </a>
+        <a href="login.html"> Login </a>
+        <a href="register.html"> Register </a>
+       
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+
+</section>
+
+<section class="credit">
+
+    <p> Created by <span>Mr.Abhimanyu Debata</span> | all rights reserved! 2022 </p>
+
+    <img src="images/card_img.png" alt="">
+
+</section>
+        <!-- end of footer -->
+    
+        
+    
+    
+    
+        
+        <script src="slide.js"></script>
+        <script src="app.js"></script>
+      </body>
+</html>

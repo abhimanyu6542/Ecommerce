@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>AbhiShop- Furniture</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- font awesome cdn -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+        <link rel="stylesheet" href="style.css">
+        
+      </head>
+      <body>
+    
+        <!-- header  -->
+        <header>
+          <div class = "container">
+            <!-- navbar -->
+            <nav class = "navbar">
+              <a href = "index.html" class = "navbar-brand"><i class="fas fa-store"></i> AbhiShop</a>
+              <form action="" class="search-form">
+                <input type="search" id="search-box" placeholder="search here...">
+                <label for="search-box" class="fas fa-search"></label>
+              </form>
+        
+              <button type = "button" class = "navbar-toggler">
+                <i class = "fas fa-bars"></i>
+              </button>
+              <div class = "navbar-collapse">
+                <ul>
+                  <li><a href = "#">Home</a></li>
+                  <li><a href = "#">Product</a></li>
+                  <li><a href = "#">New Arrivals</a></li>
+                  <li><a href = "#">Blog</a></li>
+                  <li><a href = "#">contact</a></li>
+                </ul>
+              </div>
+    
+              <div class = "cart">
+                <a href="login.html" class="fas fa-user" id="user"></a>
+                <button type = "button" id = "cart-btn">
+                  <i class = "fas fa-shopping-cart"></i>
+                  <span id = "cart-count-info">0</span>
+                </button>
+                
+                <div class = "cart-container">
+                  <div class = "cart-list">
+                    
+                  </div>
+    
+                  <div class = "cart-total">
+                    <h3>Total: $</h3>
+                    <span id = "cart-total-value"></span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+            <!-- end of navbar -->
+    
+            <!-- banner -->
+            <div class = "banner">
+              <div class = "banner-content">
+              
+                <h2 style="display:none ;">Login Now</h2>
+
+                <div class="userForm" style="border:1px solid Green ; width: 20rem; height: 20rem;">
+                <form action="index.html">
+                  <h2 style="display:block; justify-content: center; margin-left:6rem ;">Login Now</h2>
+
+                  <div class="form-group" style="display:block; justify-content:center;">
+                    <label for="email" style="display:block; justify-content: center;  margin-left:8rem ">Email:</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" style="margin-left: 5rem;">
+                  </div>
+                  <div class="form-group">
+                    <label for="pwd" style="margin-left: 8rem;">Password:</label>
+                    <input type="password" class="form-control" id="psw" placeholder="Enter password" name="pwd" style="margin-left: 5rem;">
+                  </div>
+                 
+                  <button type="button" onclick="saveData()" id="save_btn" class="btn btn-default" style="display:block; justify-content: center;">LogIn</button>
+                </form>
+                <br> 
+
+               <h4 style="margin:1rem ;">Don't have an Account Please  <br> <a href="register.html" style="color:red ; display: block; justify-content: center; text-align: center;">Register</a></h4> 
+              </div>
+            </div>
+              
+    
+            
+            </div>
+        </header>
+        <!-- end of header -->
+    
+        <!-- products section  -->
+       
+    
+        <!-- footer -->
+      <section class="quick-links">
+
+    <a href="home.html" class="logo"> <i class="fas fa-store"></i> AbhiShop </a>
+
+    <div class="links">
+        <a href="home.html"> Home </a>
+        <a href="about.html"> About </a>
+        <a href="products.html"> Products </a>
+        <a href="contact.html"> Contact </a>
+        <a href="login.html"> Login </a>
+        <a href="register.html"> Register </a>
+       
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+    </div>
+
+</section>
+
+<section class="credit">
+
+    <p> Created by <span>Mr.Abhimanyu Debata</span> | all rights reserved! 2022 </p>
+
+    <img src="images/card_img.png" alt="">
+
+</section>
+        <!-- end of footer -->
+    
+        <script>
+          let name=localStorage.getItem('name')?localStorage.getItem('name'):''
+         console.log(name);
+         if(name!='')
+         {
+           alert('Please visit profile');
+           window.location.href="profile.html";
+         }
+ function saveData()
+ {
+ let email,psw;
+ email=document.getElementById("email").value;
+ 
+ psw=document.getElementById("psw").value;
+ 
+ let user_records=new Array();
+ user_records=JSON.parse(localStorage.getItem("users"))?JSON.parse(localStorage.getItem("users")):[]
+ if(user_records.some((v)=>{return v.email==email && v.psw==psw}))
+ {
+   alert("Login Pass");
+   let current_user=user_records.filter((v)=>{return v.email==email && v.psw==psw})[0]
+  localStorage.setItem('name',current_user.name);
+  localStorage.setItem('email',current_user.email);
+   window.location.href="profile.html"
+ }
+ else
+ {
+   alert('Login Fail');
+ }
+ 
+ }
+           </script>
+    
+    
+    
+        
+       
+        <script src="app.js"></script>
+      </body>
+</html>
